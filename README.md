@@ -1,27 +1,13 @@
-# HTML Dev Template
-A simple, web development file structure, to speed web development.  This template is a good starting point for a web site requiring Bootstrap, jQuery and Google fonts. Originally coded on 6/6/2017.  By Steve Zaske.
+# Places
+A web site that uses JavaScript objects.
 
-## Install Instructions
-1. git clone the repository, to your local drive
-2. rename the folder
-3. delete the .git (hidden) folder
-4. git init
+## Specifications
 
+|Behavior - Plain English|Input|Output|
+|---|---|---|
+|users adds a place with name, location, year visited|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|
+|users adds a place with a name only|{name:"Warren & Annabel's"}|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|
 
-## What's included
-Within the repository you'll find the following directories and files:
-
-```
-html-dev-template/
-├── css/
-│    ├── styles.css
-│    └── bootstrap.css
-├── js/
-│    ├── jquery-3.2.1.js
-│    └── script.js
-├── index.html
-└── README.md
-```
 
 Direct questions and comments to: [github@zaske.com](mailto:github@zaske.com)
 
