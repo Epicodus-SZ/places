@@ -1,11 +1,17 @@
 //Business Logic
-
-//place object
-function place(name,location,yearVisited) {
+//place object constructor
+function place(name,city,state,yearVisited) {
   this.name = name;
-  this.location = location;
+  this.city = city;
+  this.state = state;
   this.yearVisited = yearVisited;
 }
+
+//place location method
+place.prototype.location = function(){
+  return this.city + ", " + this.state;
+}
+
 
 //Interface Logic
 $(document).ready(function() {
@@ -13,13 +19,19 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedName = $("#inputName").val();
-    var inputtedLocation = $("#inputLocation").val();
+    var inputtedCity = $("#inputCity").val();
+    var inputtedState = $("#inputState").val();
     var inputtedYearVisited = $("#inputYearVisited").val();
     if (inputtedName === "") {
       alert("Please enter a Name");
     } else {
-      var newPlace = new place(inputtedName, inputtedLocation, inputtedYearVisited);
-      $("#placeList").append("<li>"+inputtedName+"</li>");
+      var newPlace = new place(inputtedName, inputtedCity, inputtedState, inputtedYearVisited);
+      $("#placeList").append("<li>"+newPlace.name+": "+newPlace.location()+ "</li>");
+      //Clears the form fields
+      $("#inputName").val("");
+      $("#inputCity").val("");
+      $("#inputState").val("");
+      $("#inputYearVisited").val("");
     }
 
 

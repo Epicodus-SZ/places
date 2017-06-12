@@ -6,7 +6,8 @@ A web site that uses JavaScript objects.
 |Behavior - Plain English|Input|Output|
 |---|---|---|
 |users adds a place with name, location, year visited|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|
-|users adds a place with a name only|{name:"Warren & Annabel's"}|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|
+|users leaves the name field empty|{name:""}|alert appears, asking the user to enter a name|
+|user submits a proper place|{name:"Warren & Annabel's",location:"Maui",yearVisited:"2013"}|form fields are cleared|
 
 
 Direct questions and comments to: [github@zaske.com](mailto:github@zaske.com)
